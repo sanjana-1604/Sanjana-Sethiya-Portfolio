@@ -1,0 +1,137 @@
+
+:root{
+  --font-color:#354f52;
+  --padding-common: 10px;
+}
+*
+{
+  margin: 0;
+  padding: 0; 
+
+}
+
+html, body {
+  padding: var(--padding-common);
+  background-color: #cad2c5;
+ color: var(--font-color);
+ height: 100%;
+ width: 100%;
+ font-family: 'Quicksand', sans-serif;
+ font-size:20px;
+ 
+}
+header
+{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  padding: var(--padding-common)
+   
+}
+#logo_icon
+{ 
+  height:5%;
+  width:5%; 
+}
+#name_icon
+{
+  height: 7%;
+  width:7%;
+  
+}
+a{
+  text-decoration:none ;
+  color: var(--font-color);
+  
+}
+.header_nav a:hover{
+  text-decoration: underline;
+}
+main
+{
+  padding: var(--padding-common);
+  margin: var(--padding-common);
+}
+#intro_section 
+{
+  font-family: 'Varela Round', sans-serif;
+  font-size: 48px;
+}
+.work_section
+{
+  padding:var(--padding-common);
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-areas: 
+  "work-1" "work-2"
+  "work-3" "work-4"
+  "work-5" "work-6";
+  
+}
+.polaroid
+{
+  height: 100%;
+  width:100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+.polaroid img
+{
+  display: block;
+  width:80%;
+  height: 100%;
+}
+.container
+{
+  background-color: white;
+}
+#Work-1
+{
+  grid-area: work-1;
+  
+ 
+}
+#Work-2
+{
+  grid-area: work-2;
+  
+}
+#Work-3
+{
+  grid-area: work-3;
+}
+#Work-4
+{
+  grid-area: work-4;
+}
+#Work-5
+{
+  grid-area: work-5;
+}
+#Work-6
+{
+  grid-area: work-6;
+}
+#footer{
+display: grid;
+grid-template-columns: 2fr 1fr;
+font-size:15px;
+}
+
+
+
+@media(max-width:400px)
+{
+  #logo_icon
+{
+  
+  visibility: visible;
+
+}
+#name_icon
+{
+  visibility: hidden;
+}
+}
