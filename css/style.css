@@ -1,6 +1,6 @@
 
 :root{
-  --font-color:rgb(53, 79, 82);
+  --font-color:#354f52;
   --padding-common: 10px;
 }
 *
@@ -11,8 +11,8 @@
 }
 
 html, body {
-  padding: var(--padding-common);
-  background-color: #cad2c5;
+  
+background-color: #cad2c5;
  color: var(--font-color);
  height: 100%;
  width: 100%;
@@ -22,10 +22,15 @@ html, body {
 }
 header
 {
+  /*position:fixed;
+  width:100%;  
+  top:0;*//*to diplay fixed header */
   display:flex;
   flex-direction:row;
-  justify-content:space-around;  
+  justify-content:space-between;  
   box-shadow: 0px 5px 5px rgba(53, 79, 82, 0.2);
+  z-index: 1;
+  padding: var(--padding-common);
 }
 a{
   text-decoration:none ;
@@ -36,19 +41,19 @@ a{
 { 
   height:7%;
   width:7%; 
-  padding: 20px 0; 
+  align-self: center; 
+  visibility:visible;
 }
 #name_icon
 {
   height: 7%;
   width:7%; 
-  padding: 20px 0; 
+  align-self: center;
 }
 
 .header_nav
-{
- 
-  padding: 30px 0;
+{ 
+  align-self: center;
 }
 .header_nav a:hover{
   text-decoration: underline;
@@ -59,7 +64,8 @@ a{
 main
 {
   padding: var(--padding-common);
- 
+  box-shadow: 0px 5px 5px rgba(53, 79, 82, 0.2); 
+  width:100%;
 }
 .intro_section
 {
@@ -68,19 +74,19 @@ main
   padding: var(--padding-common);
   margin: 20px 0;
   width: 100%;
-  height: auto;
- 
+  height: auto; 
   display:grid;
   gap:var(--padding-common);
   grid-template-columns: 1fr 1fr;  
   grid-template-areas: 
   " profile-pic intro";
-
 }
 #profile_pic
 {
+  max-width: 100%;
+  height: auto;
   grid-area: profile-pic;
-  transform: scaleX(-1);
+  transform: scaleX(-1); /*to flip the image*/
 }
 #intro_description 
 {
@@ -102,8 +108,7 @@ main
 .polaroid
 {
   box-shadow: 0 4px 8px 0 rgba(53, 79, 82, 0.2), 0 6px 20px 0 rgba(53, 79, 82, 0.19);
-  margin-bottom: 25px;
-  
+  margin-bottom: 25px;  
 }
 .polaroid img
 {
@@ -158,6 +163,7 @@ figcaption
 {
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0px 5px 5px rgba(53, 79, 82, 0.2);
 }
 /*
 #about
@@ -174,27 +180,53 @@ figcaption
 #footer{
 display: grid;
 grid-template-columns: 2fr 1fr;
-font-size:15px;
-box-shadow: 5px 0px 5px rgba(53, 79, 82, 0.2);
+box-shadow: 5px 0px 10px rgba(53, 79, 82, 0.2);
 padding: var(--padding-common);
 }
 #footer_nav a
 {
+ justify-self: center;
   margin: 0px 10px;
 }
 
 
 
-@media(max-width:400px)
-{
-  #logo_icon
-{
-  
-  visibility: visible;
 
-}
-#name_icon
+@media only screen and (max-width: 768px)
 {
-  visibility: hidden;
+  body
+  {
+    font-size:15px;
+  }
+
+  .intro_section
+{
+  font-size:28px;
+ 
+  grid-template-columns: 1fr ;  
+  grid-template-areas: 
+  " profile-pic "
+  "intro";
 }
+.work_section
+{  
+  grid-template-columns: 1fr ;  
+  grid-template-areas: 
+  "work-1 "
+  "work-2"
+  "work-3 "
+  "work-4"
+  "work-5 "
+  "work-6";
+  
+}
+#footer{
+ 
+  grid-template-columns: 1fr;
+  box-shadow: 5px 0px 10px rgba(53, 79, 82, 0.2);
+  padding: var(--padding-common);
+  }
+
+
+
 }
