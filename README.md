@@ -10,7 +10,7 @@ N/A
 
 ## Usage
 
-    ![work image](images/work-1.png)
+    To display my web development work.
     
 
 ## Credits
