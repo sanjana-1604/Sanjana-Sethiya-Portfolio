@@ -10,7 +10,7 @@ N/A
 
 ## Usage
 
-    ![work image](./images/work-1.png)
+    ![work image](images/work-1.png)
     
 
 ## Credits
