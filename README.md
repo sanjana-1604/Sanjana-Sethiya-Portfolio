@@ -11,7 +11,8 @@ N/A
 ## Usage
 
     To display my web development work.
-    ![wrok-01](./images/portfolio_landing_page.png)
+
+![wrok-01](./images/portfolio_landing_page.png)
     
 
 ## Credits
